@@ -7,7 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Answer extends Model
 {
+    protected $guarded = [''];
     use HasFactory;
+
+    protected $fillable = [
+        'body',
+        'user_id',
+        'question_id',
+        'status',
+    ];
 
     public function user()
     {
